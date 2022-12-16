@@ -1,11 +1,8 @@
-import { AuthErrorCodes } from 'firebase/auth';
-import { connectFirestoreEmulator } from 'firebase/firestore';
 import {useState } from 'react';
-import { Await, Form } from 'react-router-dom';
 import FormInput from '../form-input/form-input.component'
-import './sign-up-form.styles.scss'
 import Button from '../button/button.component'
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from '../../utils/firebase/firebase.utils';
+import './sign-up-form.styles.scss'
 
 
 const defaultFormFields = {
@@ -98,7 +95,7 @@ const SignUpForm = () => {
           value={confirmPassword}
         />
 
-        <Button buttonType='default' type='submit'> Sign Up </Button>
+        <Button type='submit'> Sign Up </Button>
 
       </form>
     </div>
